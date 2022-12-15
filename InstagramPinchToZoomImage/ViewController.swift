@@ -196,7 +196,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         mainView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
-    weak var delegate: SubclassedCellDelegate?
+    weak var delegate: ZoomDelegate?
     var overlayView: UIView!
     let maxOverlayAlpha: CGFloat = 0.8
     let minOverlayAlpha: CGFloat = 0.2
@@ -259,6 +259,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 }
 
-protocol SubclassedCellDelegate: AnyObject {
+protocol ZoomDelegate: AnyObject {
     func zooming(started: Bool)
 }
